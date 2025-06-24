@@ -1,0 +1,25 @@
+.underlined-textbox {
+    transition: background-color 0.1s ease;
+    position: relative;
+    color: rgba(255,255,255,0.7);
+}
+
+.underlined-textbox::after {
+    content: '';
+    background-color: var(--line-color);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.underlined-textbox:focus-within {
+    background-color: var(--hover-bg);
+    color: var(--line-color);
+}
+
+.underlined-textbox:focus-within::after {
+    transform: scaleX(1);
+}

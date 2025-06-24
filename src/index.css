@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@import 'normalize.css';
+
+:root {
+    --light-green: #1BEF89;
+    --medium-green: #14AE5C;
+    --medium-red: #FF4E4E;
+    --orange: #FF9409; 
+    --orange-red: #F24822;
+    --medium-blue: #169BE2;
+    --deep-pink: #FB1466;
+    --light-blue: #40FFD9;
+    --dark-blue: #162DFA;
+    --steel: #54BCBA;
+
+    --dark-blue-bg: #1F1F2E;
+    --trinary-blue-card-bg: #2D2D3F;
+    --primary-blue-card-bg: #2E2E3F;
+    --blue-stroke: #404060;
+    --secondary-blue-card-bg: #262634;
+    --pale-purple: #7985EA;
+    --light-purple: #404060;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+label {
+  user-select: none;
+}

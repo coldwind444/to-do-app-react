@@ -1,0 +1,74 @@
+.underlined-tab {
+    height: 60px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.underlined-tab::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: var(--medium-blue);
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
+}
+
+.underlined-tab:hover,
+.underlined-tab.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--medium-blue);
+}
+
+.underlined-tab:hover::after,
+.underlined-tab.active::after {
+    transform: scaleX(1);
+}
+
+.hover-btn {
+    transition: opacity 0.1s ease;
+}
+
+.hover-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.oauth-hover-btn {
+    border-radius: 300px 20px 20px 300px;
+    transition: border-radius 0.3s ease;
+}
+
+.oauth-hover-btn:hover {
+    border-radius: 20px;
+}
+
+.oauth-hover-btn img {
+    transition: transform 0.2s ease;
+}
+
+.oauth-hover-btn:hover img {
+    transform: scale(1.2);
+}
+
+.oauth-hover-btn:hover label {
+    color: white;
+}
+
+.slider {
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider.first-slide {
+    transform: translateX(0);
+}
+
+.slider.second-slide {
+    transform: translateX(-50%);
+}

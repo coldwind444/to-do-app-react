@@ -1,0 +1,58 @@
+.logout-btn {
+    transition: gap 0.1s ease;
+}
+
+.logout-btn:hover {
+    gap: 15px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.tab label {
+    cursor: pointer;
+}
+
+.tab::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
+}
+
+.tab:hover,
+.tab.active {
+    color: var(--orange);
+}
+
+.tab:hover::after,
+.tab.active::after {
+    transform: scaleX(1);
+}
+
+/* styles.css */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #262634;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Tailwind's blue-400 */
+    border-radius: 4px;
+}
