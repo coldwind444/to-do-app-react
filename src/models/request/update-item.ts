@@ -2,7 +2,7 @@ export interface UpdateItemRequest {
     id: number
     name?: string
     description?: string
-    deadline?: Date
+    deadline?: string
     isDone?: boolean
-    finishedDate?: Date
+    finishedDate?: string
 }

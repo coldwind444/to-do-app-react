@@ -4,4 +4,5 @@ export interface UserRegisterRequest {
     fname: string
     lname: string
     gender: boolean
+    email: string
 }

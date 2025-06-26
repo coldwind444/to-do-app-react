@@ -27,7 +27,7 @@ const UnderlineTextBox = (
                 {icon && <FontAwesomeIcon className={clsx(`pl-[20px] ${fontSize}`)} icon={icon}/>}
             </div>
             <div className={clsx(`text-white ${fontSize} w-4/5`)}>
-                <input className={clsx('w-full h-[35px] border-none outline-none')} 
+                <input className={clsx('w-full h-[35px] border-none outline-none scheme-dark')} 
                         type={type} placeholder={hint} onChange={onChange}/>
             </div>
             <div className={clsx('absolute bottom-[0] bg-[rgba(255,255,255,0.7)] h-[1px] w-full')}></div>

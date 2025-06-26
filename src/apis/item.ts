@@ -12,32 +12,33 @@ export const getAllItems = async (token: string) : Promise<ApiResponse<ItemRespo
 
 export const updateItem = async (token: string, req: UpdateItemRequest) : Promise<ApiResponse<UpdateItemRequest>> => {
     const api = createApiWithToken(token)
-    const res = await api.post('/items/update', req)
+    const res = await api.put('/items/update', req)
     return res.data
 }
 
-export const getItemsByStatus = async (token: string, status: boolean) : Promise<ApiResponse<ItemResponse[]>> => {
-    const api = createApiWithToken(token)
-    const res = await api.get('/items/status', {
-        params: {
-            s: status
-        }
-    })
-    return res.data
-}
+// export const getItemsByStatus = async (token: string, status: boolean) : Promise<ApiResponse<ItemResponse[]>> => {
+//     const api = createApiWithToken(token)
+//     const res = await api.get('/items/status', {
+//         params: {
+//             s: status
+//         }
+//     })
+//     return res.data
+// }
 
-export const searchItem = async (token: string, name: string) : Promise<ApiResponse<ItemResponse[]>> => {
-    const api = createApiWithToken(token)
-    const res = await api.get('/items/search', {
-        params: {
-            name: name
-        }
-    })
-    return res.data
-}
+// export const searchItem = async (token: string, name: string) : Promise<ApiResponse<ItemResponse[]>> => {
+//     const api = createApiWithToken(token)
+//     const res = await api.get('/items/search', {
+//         params: {
+//             name: name
+//         }
+//     })
+//     return res.data
+// }
 
 export const createItem = async (token: string, req: CreateItemRequest) : Promise<ApiResponse<ItemResponse>> => {
     const api = createApiWithToken(token)
+    console.log(req)
     const res = await api.post('/items/create', req)
     return res.data
 }

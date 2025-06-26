@@ -29,4 +29,10 @@ html {
 
 label {
   user-select: none;
+  cursor: pointer;
+}
+
+input::selection {
+  background-color: #3e3d5d		; /* bg-blue-500 */
+  color: white;
 }

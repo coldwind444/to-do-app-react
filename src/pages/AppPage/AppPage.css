@@ -56,3 +56,12 @@ h1 {
     /* Tailwind's blue-400 */
     border-radius: 4px;
 }
+
+.disabled {
+    background-color: #A7AFE8;
+    color: gray;
+}
+
+.disabled:hover {
+    opacity: 1;
+}

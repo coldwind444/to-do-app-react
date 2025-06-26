@@ -35,6 +35,24 @@
     transition: opacity 0.1s ease;
 }
 
+.blue-disabled {
+    background-color: #A5D5F1;
+    color: gray;
+}
+
+.hover-btn.blue-disabled:hover {
+    opacity: 1;
+}
+
+.pink-disabled {
+    background-color: #F9A3BC;
+    color: gray;
+}
+
+.hover-btn.blue-disabled:hover {
+    opacity: 1;
+}
+
 .hover-btn:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -71,4 +89,27 @@
 
 .slider.second-slide {
     transform: translateX(-50%);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.loader {
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
