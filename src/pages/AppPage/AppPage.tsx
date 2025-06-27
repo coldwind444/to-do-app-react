@@ -63,8 +63,6 @@ const AppPage = () => {
 
     const update = async (req: UpdateItemRequest) => {
         try {
-            console.log(req)
-            console.log(user?.id)
             const res = await updateItem(jwt, req)
             if (res.status === 200)
                 setItems(prev => prev.map(
@@ -100,11 +98,11 @@ const AppPage = () => {
                     <img src={user?.gender ? maleAvt : femaleAvt} className={clsx('aspect-square h-[120px] rounded-[20px] ml-[15px]')} />
                     <div className={clsx('flex-1 flex-col h-4/5 items-start gap-[10px]')}>
                         <label className={clsx('text-[rgba(255,255,255,0.8)] font-semibold text-[18px]')}>Welcome back,</label>
-                        <h2 className={clsx('text-(--light-blue) text-[22px] font-semibold')}>
+                        <h2 className={clsx('text-(--light-blue) text-[20px] max-h-[80px] h-[80px] font-semibold')}>
                             {user ? `${user.fname} ${user.lname}` : 'null'}
                         </h2>
                         <div className={
-                            clsx('flex flex-row gap-[8px] items-center mt-[40px] ml-[20px] text-(--orange-red) font-semibold',
+                            clsx('flex flex-row gap-[8px] items-center ml-[20px] text-(--orange-red) font-semibold',
                                 'logout-btn'
                             )} onClick={() => logout()}>
                             <label className="cursor-pointer">Log out</label>

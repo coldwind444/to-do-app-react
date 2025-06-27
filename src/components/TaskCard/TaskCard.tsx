@@ -102,7 +102,7 @@ const TaskCard = ({ item, update, remove }: TaskCardProps) => {
                 {editable ?
                     <div className={clsx('text-white text-[20px] ml-[20px]')}>
                         <input className={clsx('outline-none border-2 border-[rgba(255,255,255,0.2)] w-[300px] p-[5px] rounded-[5px]')}
-                            defaultValue={item ? item?.name : 'null'} type="text" onChange={(e) => setName(e.target.value)} />
+                            value={name} type="text" onChange={(e) => setName(e.target.value)} />
                     </div> :
                     <label className={clsx('text-white text-[20px] ml-[20px]')}>{item ? item.name : 'null'}</label>
                 }

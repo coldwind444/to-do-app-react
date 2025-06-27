@@ -136,10 +136,11 @@ const AuthPage = () => {
                                     clsx('bg-(--primary-blue-card-bg) h-full w-3/4 ml-auto cursor-pointer',
                                         'oauth-hover-btn'
                                     )}>
-                                    <div className={clsx('flex flex-col h-full w-full gap-[20px] justify-center items-center')}>
+                                    <a href='http://localhost:3000/auth/google/login' 
+                                        className={clsx('flex flex-col h-full w-full gap-[20px] justify-center items-center')}>
                                         <img className={clsx('aspect-square w-[50px]')} src={google} />
                                         <label className={clsx('text-[rgba(255,255,255,0.7)] font-semibold text-[18px] cursor-pointer')}>Continue with Google</label>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

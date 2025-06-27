@@ -38,7 +38,6 @@ export const updateItem = async (token: string, req: UpdateItemRequest) : Promis
 
 export const createItem = async (token: string, req: CreateItemRequest) : Promise<ApiResponse<ItemResponse>> => {
     const api = createApiWithToken(token)
-    console.log(req)
     const res = await api.post('/items/create', req)
     return res.data
 }

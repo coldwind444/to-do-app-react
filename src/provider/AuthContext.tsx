@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import type { PropsWithChildren } from "react"
 import type { LoginRequest } from "../models/request/login"
-import { login as userLogin, logout as userLogout } from "../apis/auth"
+import { refreshToken, login as userLogin, logout as userLogout } from "../apis/auth"
 import { useNavigate } from "react-router-dom"
 
 export type AuthContextType = {
@@ -52,12 +52,29 @@ export const AuthProvider = ({ children }: PropsWithChildren<{}>) => {
     }
 
     useEffect(() => {
-        if (jwt){
+        if (jwt) {
             localStorage.setItem('jwt', jwt)
         } else {
             localStorage.removeItem('jwt')
             navigate('/')
         }
+    }, [jwt])
+
+    useEffect(() => {
+        if (!jwt) return
+
+        const interval = setInterval(async () => {
+            try {
+                const res = await refreshToken(jwt, true)
+                if (res.status === 200) setJwt(res.data.jwt)
+                else await logout()
+            } catch (e) {
+                console.error('Refresh token failed.', e)
+                await logout()
+            }
+        }, 1000 * 60 * 30)
+
+        return () => clearInterval(interval)
     }, [jwt])
 
     return (
